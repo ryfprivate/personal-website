@@ -8,6 +8,8 @@ import SkillsPage from './pages/SkillsPage';
 const Layout = styled.div`
   --primary-dark: #282a36;
   --primary-light: #f8f8f2;
+  display: flex;
+  flex-direction: column;
 `;
 class App extends React.Component {
   render() {
