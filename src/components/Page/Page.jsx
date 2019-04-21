@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Element } from 'react-scroll';
 
 const Wrap = styled.div`
+  height: 91vh;
   background: ${props =>
     props.dark ? 'var(--primary-dark)' : 'var(--primary-light)'};
   color: ${props =>
@@ -17,12 +18,12 @@ class Page extends React.Component {
     const { name, header, children, dark } = this.props;
 
     return (
-      <Element name={name}>
-        <Wrap dark={dark}>
+      <Wrap dark={dark}>
+        <Element name={name}>
           <Header>{header}</Header>
           {children}
-        </Wrap>
-      </Element>
+        </Element>
+      </Wrap>
     );
   }
 }
