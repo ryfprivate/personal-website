@@ -18,12 +18,12 @@ class Page extends React.Component {
     const { name, header, children, dark } = this.props;
 
     return (
-      <Wrap dark={dark}>
-        <Element name={name}>
+      <Element name={name}>
+        <Wrap dark={dark}>
           <Header>{header}</Header>
           {children}
-        </Element>
-      </Wrap>
+        </Wrap>
+      </Element>
     );
   }
 }
