@@ -3,14 +3,28 @@ import styled from 'styled-components';
 import { Element } from 'react-scroll';
 
 const Wrap = styled.div`
-  background: var(--primary-dark);
-  color: var(--primary-light);
+  background: ${props =>
+    props.dark ? 'var(--primary-dark)' : 'var(--primary-light)'};
+  color: ${props =>
+    props.dark ? 'var(--primary-light)' : 'var(--primary-dark)'};};
 `;
 
-export default ({ children }) => {
-  return (
-    <Element>
-      <Wrap>{children}</Wrap>
-    </Element>
-  );
-};
+const Header = styled.h2`
+  margin: 0;
+`;
+class Page extends React.Component {
+  render() {
+    const { name, header, children, dark } = this.props;
+
+    return (
+      <Element name={name}>
+        <Wrap dark={dark}>
+          <Header>{header}</Header>
+          {children}
+        </Wrap>
+      </Element>
+    );
+  }
+}
+
+export default Page;
