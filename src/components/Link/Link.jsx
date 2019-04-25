@@ -6,6 +6,7 @@ const Item = styled.li`
   list-style-type: none;
   text-align: center;
   color: var(--secondary-dark);
+  padding: 0.5em;
   > .active {
     text-decoration: underline;
   }
@@ -19,7 +20,7 @@ export default ({ label, destination }) => {
         to={destination}
         spy={true}
         smooth={true}
-        offset={0}
+        offset={-3}
         duration={500}
       >
         {label}
