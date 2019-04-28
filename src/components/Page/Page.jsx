@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import { Element } from 'react-scroll';
 
 const Wrap = styled.div`
-  height: 100vh;
-  padding: 1em 4.5em;
+  @media only screen and (min-width: 768px) {
+    padding: 1em 8em;
+  }
   ${props => props.background}
 `;
 
