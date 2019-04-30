@@ -12,6 +12,12 @@ const background = `
   background-attachment: fixed;
 `;
 
+const Wrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: var(--primary-light);
+`;
+
 const Text = styled.p`
   color: var(--primary-light);
 `;
@@ -19,7 +25,9 @@ const Text = styled.p`
 export default () => {
   return (
     <Page name="experience" background={background}>
-      <Text>{text}</Text>
+      <Wrap>
+        <Text>{text}</Text>
+      </Wrap>
     </Page>
   );
 };
