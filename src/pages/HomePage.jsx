@@ -47,17 +47,10 @@ const Subheader = styled.p`
 `;
 
 class HomePage extends React.Component {
-  componentDidMount() {
-    console.log('mounted home');
-  }
   render() {
     return (
       <Page name="home" background={background}>
-        <Wrap
-          onScroll={() => {
-            console.log('function');
-          }}
-        >
+        <Wrap>
           <Content>
             <TextContainer>
               <Header>Hi, my name is Ray</Header>
